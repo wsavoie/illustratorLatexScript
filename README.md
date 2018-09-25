@@ -3,7 +3,7 @@
 
 To install this script start by:
 
-1. open and install all the fonts from the fonts folder.
+1. go to "~\MiKTeX 2.9\fonts\type1\public\amsfonts\cm" and install all fonts there
 2. place "LaTex.js" in  "~\Adobe\Adobe Illustrator CC 2015\Presets\en_US\Scripts" folder. 
 	
 if you'd like you can load my custom actions useful for editing figures as well:
