@@ -65,6 +65,18 @@ if(latexcode!=null)
 		var doc = app.activeDocument;
 		var placed= doc.groupItems.createFromFile(pdffile);
 		grp.pageItems[0].remove();
+		
+		var sel = doc.selection;
+		var grpitems=sel[0].pageItems;
+		//raise everything up a group
+		for( var i=grpitems.length; --i>=0; ){
+			grpitems[i].move(grpitems.parent.parent,ElementPlacement.PLACEATEND);
+		};
+		//remove empty clipgroup object
+		doc.selection[1].pageItems[0].remove()
+		//var c= grpitems.length
+		//alert(c)
+		
 	}
 	
 		 else
@@ -81,7 +93,9 @@ if(latexcode!=null)
   else
     alert("File "+temppath+"\\"+pdffile.name+" could not be created. LaTeX error?");
   }
+  
 
+//alert(c);
 //grp.pageItems.removeAll();
 
 //var targetDoc=app.activeDocument;
